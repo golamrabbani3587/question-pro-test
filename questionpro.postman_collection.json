@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "1d4fa6d6-4c58-49c4-ae8b-e6fc3f4543ae",
+		"name": "questionpro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27456613"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Rabbani6\",\n    \"positionId\": 3,\n    \"email\": \"rabbani66@gmail.com\",\n    \"password\": \"123456\",\n    \"positionName\": \"SE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bareer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhYmJhbmk2NkBnbWFpbC5jb20iLCJzdWIiOjcsImlhdCI6MTcxMzcxODY5NSwiZXhwIjoxNzEzNzIyMjk1fQ.n6FTY1UlFlLnn6FBJGTd5h8DJ1hgsc0sN4ccwsAK18E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user by pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bareer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhYmJhbmk2NkBnbWFpbC5jb20iLCJzdWIiOjcsImlhdCI6MTcxMzcxODY5NSwiZXhwIjoxNzEzNzIyMjk1fQ.n6FTY1UlFlLnn6FBJGTd5h8DJ1hgsc0sN4ccwsAK18E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/pagination?page=1&pageSize=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"pagination"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by position id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/by-position?positionId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"by-position"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "positionId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"rabbani66@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
