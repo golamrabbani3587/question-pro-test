@@ -11,7 +11,7 @@ $  yarn
 $ npm run start
 
 # run migration 
-$npx typeorm migration:run -d dist/toc.js
+$ npx typeorm migration:run -d dist/toc.js
 
 # watch mode
 $ npm run start:dev
@@ -40,5 +40,12 @@ Another way to reduce execution tome is making pagination because we don't need 
 
 this 3 api ( get all users, pagination and by positionId ) are protected by JWT.
 
-##Where I can 
+### Where to improve
+one million data is big amount of traffic. For this amount of data or more then data we need to take more initiative like, We can user Kubernetes for auto scaling the application. 
+
+We can use Docker, Jenkins for CICD and Grafana for system monitoring.
+
+
+###How to deploy
+We need Serve for hosting from Amazon, Google Cloud, Azure, Digital Ocean or others. Then we need to install necessary dependencies like NodeJS, docker, kubernetes, Grafana Jenkins, Nginx. Then we can create Jenkinsfile as per our requirement like creating docker file command for Kubernetes configuration and running. Wen need to create Nginx configuration like creating files in sites available and sites enabled and create host file according our domain name. Then we need to our add our domain in hosting provider configuration like route53 in aws.
 
