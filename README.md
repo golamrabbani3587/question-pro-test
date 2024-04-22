@@ -40,6 +40,8 @@ Another way to reduce execution tome is making pagination because we don't need 
 
 this 3 api ( get all users, pagination and by positionId ) are protected by JWT.
 
+If you add data by running migration file, you have o flush the redis or add a need user using api , it will flush the redis. 
+
 ### Where to improve
 one million data is big amount of traffic. For this amount of data or more then data we need to take more initiative like, We can user Kubernetes for auto scaling the application. 
 
