@@ -49,5 +49,5 @@ We can use Docker, Jenkins for CICD and Grafana for system monitoring.
 
 
 ### How to deploy
-We need Serve for hosting from Amazon, Google Cloud, Azure, Digital Ocean or others. Then we need to install necessary dependencies like NodeJS, docker, kubernetes, Grafana Jenkins, Nginx. Then we can create Jenkinsfile as per our requirement like creating docker file command for Kubernetes configuration and running. Wen need to create Nginx configuration like creating files in sites available and sites enabled and create host file according our domain name. Then we need to our add our domain in hosting provider configuration like route53 in aws.
+We need Serve for hosting from Amazon, Google Cloud, Azure, Digital Ocean or others. Then we need to install necessary dependencies like NodeJS, docker, kubernetes, Grafana Jenkins, Nginx. Then we can create Jenkinsfile as per our requirement like creating docker file command for Kubernetes configuration and running. Wen need to create Nginx configuration like creating files in sites available and sites enabled and create host file according our domain name. Then we need to our add our domain in hosting provider configuration like route53 in aws. Can use pm2 run the app forever. 
 
